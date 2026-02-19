@@ -12,6 +12,7 @@ export default defineConfig([
     "tsconfig.json",
     "package.json",
     "package-lock.json",
+    "README.md",
   ]),
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
