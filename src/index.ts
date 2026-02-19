@@ -1,13 +1,12 @@
-import express from "express";
-import type { Request, Response } from "express";
+import express from 'express'
+import type { Application } from 'express'
+import { route } from './routes/index.ts'
 
-const app = express();
-const port = 3000;
+const app: Application = express()
+const port: number = 3000
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello World!");
-});
+route(app)
 
 app.listen(port, () => {
-  console.log(`Server Start on http://localhost:${port}`);
-});
+  console.log(`Server Start on http://localhost:${port}`)
+})
