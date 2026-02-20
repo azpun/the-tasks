@@ -1,8 +1,10 @@
 import type { Application, Router } from 'express'
 import { TaskRouter } from './tasks.ts'
 import { UserRouter } from './users.ts'
+import { LandingRouter } from './landing.ts'
 
 const _routes: Array<[string, Router]> = [
+  ['/', LandingRouter],
   ['/tasks', TaskRouter],
   ['/users', UserRouter]
 ]

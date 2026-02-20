@@ -1,0 +1,10 @@
+interface PostType {
+  id: number
+  name: string
+  email: string
+  role: 'admin' | 'user'
+  createdAt: string
+  updatedAt: string
+}
+
+export type { PostType }
