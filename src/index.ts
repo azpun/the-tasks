@@ -6,6 +6,18 @@ import { logger } from './utils/logger.ts'
 const app: Application = express()
 const port: number = 3000
 
+// body parser
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+
+// cors access handler
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Methods', '*')
+  res.setHeader('Access-Control-Allow-Headers', '*  ')
+  next()
+})
+
 route(app)
 
 app.listen(port, () => {
