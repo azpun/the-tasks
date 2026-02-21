@@ -1,8 +1,10 @@
 import { Router, type Request, type Response } from 'express'
+import { logger } from '../utils/logger.ts'
 
 export const LandingRouter = Router()
 
 LandingRouter.get('/', (req: Request, res: Response) => {
+  logger.info('Landing Page Load Success')
   res.status(200).send(`
     <!DOCTYPE html>
     <html lang="en">
